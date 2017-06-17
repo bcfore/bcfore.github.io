@@ -1,0 +1,16 @@
+A lot of the content and all of the styling here is provided by the
+default theme.
+
+To see where those files are located, run:
+
+bundle show minima
+
+Currently that returns:
+
+/home/bcfore/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/minima-2.1.1
+
+If you wanted to override any of them, then you'd mimic the directory
+structure and filename locally, and write the content that you wanted.
+
+I copied all of the minima theme's files and directories to here,
+to use for comparison when setting up my site.
