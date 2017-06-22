@@ -1,0 +1,36 @@
+# This is 'readline's startup file.
+# You can use it to map your own key bindings,
+# and to set certain variables.
+#
+# Here are the variables I've set:
+
+set editing-mode vi
+set bell-style none
+# Immediately shows all completion possibilities (instead of beeping first):
+set show-all-if-ambiguous On
+
+# For the key-bindings, you can list the current ones using
+# bind -P
+# or
+# bind -p
+# (for an output that can be used as input here).
+#
+# The escape sequences are:
+# \C- = control
+# \M- = meta (escape)
+# \e  = escape
+# \\  = backslash
+# \<"> = "
+# \'  = '
+#
+# You can use conditionals:
+#
+# $if mode=emacs
+#   "\C-t": "I'm using emacs"
+# $else
+#   "\C-t": "I'm using vi"
+# $endif
+#
+# For editing mode, use mode= (as above).
+# For terminal type: term=
+# For app-specific check: $if bash (or the app name)
