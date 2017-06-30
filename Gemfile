@@ -26,3 +26,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# BCF
+# There's some kind of issue on Mac OS with rb-fsevent version 0.10.1.
+gem "rb-fsevent", "~> 0.9.0"
