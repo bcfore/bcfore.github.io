@@ -1,11 +1,11 @@
 <header class="site-header">
   <nav>
     <ul>
-      <li><a href="{% link index.html %}">Home</a></li>
-      <li><a href="{% link pages/projects.html %}">Projects</a></li>
+      <li><a href="{% link index.html %}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+      <li><a href="{% link pages/projects.html %}" class="{% if page.url == '/projects' %}active{% endif %}">Projects</a></li>
       <li><a href="{% link files/resume/brian_fore_resume_0617.pdf %}">Resume</a></li>
-      <li><a href="#">Notes</a></li>
+      <li><a href="{% link pages/notes.html %}" class="{% if page.url == '/notes' %}active{% endif %}">Notes</a></li>
     </ul>
   </nav>
-  <h1>Brian Fore</h1>
+  <h1><a href="{% link index.html %}">Brian Fore</a></h1>
 </header>
