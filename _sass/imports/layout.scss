@@ -1,0 +1,42 @@
+
+a {
+  color: inherit;
+  &:hover { text-decoration: underline; }
+}
+
+body {
+  font: normal 20px sans-serif;
+}
+
+.site-header {
+  text-align: center;
+
+  nav {
+    color: bcf-colors(pale, sky);
+    background: bcf-colors(bluebell);
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 50px;
+    line-height: 50px;
+
+    li {
+      display: inline-block;
+      padding: 0 25px;
+    }
+  }
+
+  h1 {
+    color: bcf-colors(pale);
+    background: bcf-colors(leaf) url("/assets/images/alsemberg_11_smudged.jpg") center;
+    background-size: cover;
+    height: 220px;
+    line-height: 220px;
+    font-size: 72px;
+    font-weight: normal;
+    text-shadow: 0 1px 3px rgba(0,0,0,.45);
+  }
+}
+
+.home-main > section {
+  border-top: solid 1px bcf-colors(pale, sky)
+}

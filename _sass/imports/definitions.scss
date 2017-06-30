@@ -1,0 +1,36 @@
+$colors: (
+  beech: (
+    light: #c5b489,
+    base: #61511e,
+    dark: #211700
+  ),
+  leaf: (
+    base: #b0b23e
+  ),
+  bluebell: (
+    light: #918db3,
+    base: #433c5c,
+    dark: #2a283c
+  ),
+  pale: (
+    base: #ffffff,
+    flower: #dee0c4,
+    sky: #b8c8ca
+  )
+);
+
+@function bcf-colors($color, $tone:'base') {
+
+  @if not(map-has-key($colors, $color)) {
+    @warn "Color `#{$color}` is not in $colors.";
+    @return null;
+  }
+
+  @if not(map-has-key(map-get($colors, $color), $tone)) {
+    @warn "Color `#{$color}:#{$tone}` is not in $colors.";
+    @return null;
+  }
+
+  @return map-get(map-get($colors, $color), $tone);
+}
+
