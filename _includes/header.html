@@ -7,5 +7,7 @@
       <li><a href="{% link pages/notes.html %}" class="{% if page.url == '/notes' %}active{% endif %}">Notes</a></li>
     </ul>
   </nav>
-  <h1><a href="{% link index.html %}">Brian Fore</a></h1>
+  {% if page.include_name %}
+    <h1><a href="{% link index.html %}">Brian Fore</a></h1>
+  {% endif %}
 </header>
