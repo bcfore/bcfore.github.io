@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>BCF Summary of Positioning Rules</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="bcf_style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Inline Elements</h2>
+        <p>Inline elements fit to the content -- they do not take width/height values.</p>
+
+        <h3>Example:</h3>
+        <p>Anchor tags <code>&lt;a&gt;</code> are normally inline elements. They only take up the width of their content (not the whole page), then the next anchor tag follows right after.</p>
+        <div class="inline-demo-box">
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <h3>What happens if we set a margin property on an inline level element?</h3>
+        <p>Inline elements only recognize left and right margin values. Top and bottom margins are ignored.</p>
+        <div class="inline-demo-box" id="ex-margins">
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+        <p>In the example above, the anchor tags have a margin set to 45px on all sides. But only the left/right margins are affected.</p>
+
+        <h3>What about padding?</h3>
+        <div class="inline-demo-box" id="ex-padding">
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+        <p>Inline elements recognize padding values on all sides.</p>
+
+        <h3>Floating Inline Elements</h3>
+        <div class="inline-demo-box" id="ex-floating">
+          <a href="#">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+        <p>Floating inline elements changes their 'display' value to 'block', yielding them all block-level characteristics: they recognize height and width values, in addition to margin and padding values on all sides.</p>
+
+
+        <h2>Block Elements</h2>
+        <p>Block elements always start on a new line. They recognize margin and padding values on all sides. If no width value is set, they span the width of their parent container. If no height is set, they expand to fit their content.</p>
+
+        <h3>Example using divs (block elements by default):</h3>
+        <div class="block-demo-box" id="ex-1">
+          <div>This is a div with no width and height set.</div>
+          <div>This div has no width set, but its height is set to 60px, with a padding and margin of 20px around it (border-boxed).</div>
+          <div>This div has a width of 90px and no height set.</div>
+        </div>
+        <p>In the first example, the div fills the entire width, and uses just enough height to fill its content. (Note, the line-height was reduced on the text, to eliminate its default margin.) In the second example, no width was set, so it fills the entire allowed width (less its margin). For the third example, we set the width to 90px; the height automatically adjusted to fill its content.</p>
+
+        <h3>Floating Block Elements</h3>
+
+        <h4>Floating block elements with no width and height set</h4>
+        <div class="block-demo-box" id="ex-2">
+          <div>Box - 1 - Floated Left</div>
+          <div>Box - 2 - Floated Right</div>
+        </div>
+        <p>The elements were floated left and right. Since no width or height was set for them, the boxes shrunk to fit their contents (the text).</p>
+
+        <h4>Floating block elements with width and height set</h4>
+        <div class="block-demo-box" id="ex-3">
+          <div>Box - 1 - Floated Left</div>
+          <div>Box - 2 - Floated Right</div>
+        </div>
+
+        <h4>Can we change an inline element into a block element?</h4>
+        <p>Let's use anchor tags for our examples here:</p>
+        <div class="block-demo-box" id="ex-4">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+        <p>Yes, we can change display values to block, overwriting default values of inline.</p>
+
+        <h2>Inline-Block Elements</h2>
+        <p>Inline-block elements are inline elements that can take block element properties, like width and height. They are similar to floats, in that they shrink to the size of thier contents by default (but unlike floats, they do not recognize the clear property).</p>
+        <h3>Example: Using inline-blocks for navigation</h3>
+        <div class="inline-block-demo-box">
+          <a href="#">Home</a><!--
+          --><a href="#">Portfolio</a><!--
+          --><a href="#">About</a><!--
+          --><a href="#">Contact</a>
+        </div>
+        <p>We can achieve the same results using this technique as we could by setting the display property to block, and then floating the elements. Here we get some of the properties of inline elements (the elements sit next to each other) with some of the properties of block elements (they accept width, height, padding and margin). One thing to remember when centering these inline-blocks by explicitly setting the margins: you need to either account for the auto-spacing inserted in-between the blocks (which the Developer Tools console doesn't really show) or use one of the techniques to get rid of that spacing.</p>
+      </section>
+
+      <section>
+        <h1>Floats and Positioning Elements</h1>
+        <h2>Floats</h2>
+        <p>A floated element is taken out of the normal flow of the page, then set left or right. When an element is floated, it becomes a block-level element.</p>
+
+        <h3>Examples</h3>
+        <p>Here we float Box 1 left, Box 2 right, leave Box 3 as-is, and do not clear it:</p>
+        <div class="float-demo-box" id="fdb-ex-1">
+          <div>Box 1</div>
+          <div>Box 2</div>
+          <div>Box 3</div>
+        </div>
+        <p>Everything is the same here, except we add 'clear:both' to Box 3:</p>
+        <div class="float-demo-box" id="fdb-ex-2">
+          <div>Box 1</div>
+          <div>Box 2</div>
+          <div>Box 3</div>
+        </div>
+        <p>Elements following floated elements will wrap the floats. If we don't want this to happen, we can use 'clear:both'.</p>
+        <p>There are other methods to clear floats. For example, we have the clearfix method:</p>
+        <div class="codeblock">
+          <code>
+            containerElement::after {
+            <div class="code-indent">
+              content: "";<br>
+              display: block;<br>
+              clear: both;<br>
+            </div>
+            }
+          </code>
+        </div>
+        <p>Basically, you just add the pseudo-element '::after' to the parent container of the floated elements, and use it to call 'clear:both'.</p>
+
+        <h2>Positioning</h2>
+        <p>Floats can move elements to the left or right, but often we want more fine-grained control over the positioning of elements. This is where the 'position' attribute comes in. The four main values that 'position' recognizes are:</p>
+        <ul>
+          <li>Static</li>
+          <li>Fixed</li>
+          <li>Relative</li>
+          <li>Absolute</li>
+        </ul>
+
+        <h2>Static Position</h2>
+        <p>This is the default value for 'position'. Here the element renders normally on the page, following the usual rules.</p>
+
+        <h2>Fixed Position</h2>
+        <p>This allows you to fix an element relative to the browser window (the 'viewport'). As the page is scrolled, the element will remain in place. The attributes 'top', 'right', 'bottom' and 'left' are used in conjunction with 'position: fixed'.</p>
+        <p>Fixed position elements are "taken out of the normal flow of the page". (For example, they do not leave a gap in the page at their "original" location.)</p>
+        <p>The blue box in the bottem left corner of the window is a fixed position element.</p>
+        <div class="position-box-example" id="fixed-posn">I'm position fixed</div>
+
+        <h2>Relative Position</h2>
+        <p>This offsets the element relative to where it would normally be. This will leave a gap at its "original" location. Other elements will continue to wrap around this gap, rather than around the element's new, offset position.</p>
+        <p>In other words, when we offset an element in this way, it will move on top of neighboring elements, rather than "pushing them away" following the usual padding/margin rules. We demonstrate this in the following example:</p>
+        <div class="position-box-example" id="relative-posn">
+          I'm a relatively positioned box!
+        </div>
+        <p>This text is wrapping the original location of the relatively positioned box. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis efficitur nulla. Cras commodo venenatis purus, sit amet fringilla nibh venenatis nec.</p>
+
+        <h2>Position Absolute</h2>
+        <p>This offsets the element relative to its nearest (in terms of hierarchy) relatively positioned parent element. (If it has no parent with 'position: relative', then the positioning is relative to the &lt;body&gt; element.)</p>
+        <p>Like fixed position elements, absolutely positioned elements are taken out of the normal flow. They will not leave a gap in their "original" location.</p>
+        <p>In the example that follows, we set up a containing region with 'position: relative' (without bothering to offset it from its usual location). We include an absolutely positioned element within this container.</p>
+        <div id="relative-box-for-abs-example">
+          Relatively positioned container
+          <div class="position-box-example" id="absolute-posn">
+            Absolutely Positioned Box
+          </div>
+        </div>
+        <p>We set its absolute position to be in the bottom right corner of its parent container.</p>
+      </section>
+
+    </main>
+  </body>
+</html>

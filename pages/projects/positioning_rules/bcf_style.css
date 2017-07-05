@@ -1,0 +1,243 @@
+body {
+  background: #dddddd;
+  font: normal 16px/235% Helvetica, Arial, sans-serif;
+  color: #555555;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1, h2 {
+  color: #dd4444;
+}
+
+h3, h4 {
+  color: #555555;
+  font-size: 1em;
+}
+
+a {
+  color: #333333;
+  text-decoration: none;
+}
+
+ul {
+  font-style: italic;
+  line-height: 1.7em;
+}
+
+main {
+  background: #ffffff;
+  border: solid 2px #aaaaaa;
+  width: 1000px;
+}
+
+section {
+  padding: 10px 0 40px 0;
+  border-top: dashed 2px #000000;
+  margin: 0 20px;
+}
+
+section:first-child {
+  border: none;
+}
+
+section:last-child {
+  margin-bottom: 100px;
+}
+
+.inline-demo-box {
+  margin: 45px;
+  border: dashed 2px #666666;
+  padding: 20px 30px;
+}
+
+#ex-margins > a {
+  margin: 45px;
+}
+
+#ex-padding > a {
+  background: #006600;
+  color: #ffffff;
+  padding: 30px;
+}
+
+#ex-floating > a {
+  background: #227722;
+  color: #ffffff;
+  float: left;
+  padding: 20px 30px;
+  border: solid 2px #003300;
+  margin: 20px;
+}
+
+#ex-floating {
+  overflow: hidden;
+}
+
+.block-demo-box,
+.inline-block-demo-box,
+.float-demo-box {
+  background: #ffdddd;
+  color: #ffffff;
+}
+
+.block-demo-box {
+  margin: 30px 0;
+  line-height: 1em;
+  overflow: hidden;
+}
+
+#ex-1 div:first-child {
+  background: #4488dd;
+}
+
+#ex-1 div:nth-of-type(2) {
+  background: #229922;
+  height: 60px;
+  padding: 20px;
+  margin: 20px;
+  box-sizing: border-box;
+}
+
+#ex-1 div:last-child {
+  background: #ff4422;
+  width: 90px;
+}
+
+#ex-2 div:first-child {
+  background: #4488dd;
+  border: solid 1px #ff0000;
+  float: left;
+}
+
+#ex-2 div:last-child {
+  background: #ff4422;
+  border: solid 1px #ff0000;
+  float: right;
+}
+
+#ex-3 div {
+  box-sizing: border-box;
+  width: 400px;
+  height: 80px;
+  padding: 32px 0;
+  text-align: center;
+}
+
+#ex-3 div:first-child {
+  background: #ff4422;
+  float: left;
+}
+
+#ex-3 div:last-child {
+  background: #4488dd;
+  float: right;
+}
+
+#ex-4 a {
+  background: #4488dd;
+  color: inherit;
+  display: block;
+  padding: 10px;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+.inline-block-demo-box a {
+  background: #4488dd;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+  width: 175px;
+  padding: 12px 0;
+  margin: 10px;
+}
+
+.inline-block-demo-box a:first-child {
+  margin-left: 100px;
+}
+
+.float-demo-box {
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.float-demo-box div:first-child {
+  background: #ff4422;
+  float: left;
+  padding: 20px;
+}
+
+.float-demo-box div:nth-of-type(2) {
+  background: #4488dd;
+  float: right;
+  padding: 20px;
+}
+
+.float-demo-box div:last-child {
+  background: #229922;
+  padding: 12px;
+}
+
+.float-demo-box#fdb-ex-2 div:last-child {
+  clear: both;
+}
+
+.codeblock {
+  line-height: 1em;
+  margin: 35px 160px;
+  padding: 0;
+}
+
+.code-indent {
+  margin: 0 40px;
+  padding: 0;
+}
+
+.position-box-example {
+  color: #ffffff;
+  border-radius: 7px;
+  text-align: center;
+  padding: 15px 0;
+}
+
+#fixed-posn {
+  background: rgba(68, 136, 221, .8);
+  width: 220px;
+  position: fixed;
+  bottom: 40px;
+  left: 35px;
+  z-index: 2;
+}
+
+#relative-posn {
+  background: rgba(255, 68, 34, .8);
+  width: 320px;
+  position: relative;
+  top: 40px;
+  right: 60px;
+}
+
+#relative-box-for-abs-example {
+  background: #bbbbbb;
+  font-weight: bold;
+  width: 80%;
+  height: 200px;
+  padding: 20px 30px;
+  margin: 0 100px;
+  position: relative;
+}
+
+#absolute-posn {
+  background: #229922;
+  font-weight: normal;
+  line-height: 1em;
+  width: 120px;
+  padding: 20px 50px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}

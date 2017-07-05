@@ -1,0 +1,405 @@
+@import url("whitespace_reset.css");
+
+body {
+  background: #ffffff;
+  font: normal 20px 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #008000;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+nav {
+  background: #ffffff;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 13px;
+  line-height: 44px;
+  text-transform: uppercase;
+  border-top: solid 10px #f5f5f5;
+  border-bottom: solid 1px #eeeeee;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 25px;
+}
+
+nav a {
+  color: #444444;
+  font-weight: normal;
+}
+
+header {
+  background: #433434 url("images/front.jpg") center no-repeat;
+  color: #ffffff;
+  max-width: 1570px;
+  height: 428px;
+  margin: 55px auto 0 auto;
+  text-shadow: 0 1px 3px rgba(0,0,0,.45);
+}
+
+header img {
+  height: 80px;
+  margin: 150px auto 0 auto;
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,.275);
+}
+
+header h1 {
+  font-size: 72px;
+  font-weight: normal;
+  margin-top: -2px;
+}
+
+header p {
+  font-size: 31px;
+  text-transform: uppercase;
+}
+
+section {
+  border-top: solid 1px #efefef;
+  padding: 59px 0;
+  margin: 0 30px;
+}
+
+h2 {
+  color: #444444;
+  font-size: 48px;
+  font-weight: 300;
+  padding: 0 0 31px 0;
+  text-align: center;
+}
+
+section p {
+  color: #444444;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+a.button {
+  text-decoration: none;
+  display: inline-block;
+  background: #008000;
+  color: #ffffff;
+  height: 42px;
+  padding: 0 30px;
+  margin: 10px auto;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 42px;
+  text-align: center;
+}
+
+a.button:hover {
+  background: #006000;
+}
+
+#speakers ul {
+  max-width: 900px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#speakers li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 282px;
+  height: 380px;
+  margin: 4px 4px 6px 4px;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+#speakers h3 {
+  color: #008000;
+  font-size: 24px;
+  padding: 28px 0 4px 0;
+}
+
+#speakers p {
+  line-height: 160%;
+  margin: 0 9px;
+}
+
+.speaker-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 14px 11px;
+  background: rgba(0, 0, 0, .9);
+  transition: all 0.5s;
+}
+
+#speakers .speaker-info h3 {
+  padding: 0;
+}
+
+#speakers .speaker-info p {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 120%;
+  padding: 4px 0 13px 0;
+}
+
+#speakers li:hover .speaker-info,
+#speakers li:target .speaker-info {
+  opacity: 1;
+}
+
+#schedule table {
+  color: #444444;
+  font-size: 24px;
+  padding: 0 11px;
+  margin: 1px auto 0 auto;
+  border-collapse: collapse;
+}
+
+#schedule tr {
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+  height: 134px;
+}
+
+#schedule tr.no-talk {
+  height: auto;
+}
+
+#schedule p {
+  font: inherit;
+}
+
+#schedule a {
+  font-size: 18px;
+}
+
+#schedule td {
+  padding: 10px 10px 12px 12px;
+}
+
+#schedule td:nth-child(2) {
+  position: absolute;
+  right: 80px;
+}
+
+#schedule td:nth-child(3) {
+  padding-right: 170px;
+}
+
+#schedule img {
+  width: 130px;
+}
+
+ul.tags {
+  display: inline-block;
+  padding: 0 0 0 7px;
+}
+
+.tags li {
+  vertical-align: 7px;
+  display: inline;
+  color: #444444;
+  background: #eeeeee;
+  font-size: 7px;
+  padding: 1px 4px;
+  margin: 0 3px 0 0;
+  border: 1px solid #aaaaaa;
+}
+
+.content {
+  text-align: left;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content p {
+  line-height: 160%;
+}
+
+.content p + p {
+  padding: 17px 0 0 0;
+}
+
+.content > p:last-child {
+  padding-bottom: 18px;
+}
+
+#location h3 {
+  color: #444444;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 0 2px 0;
+}
+
+#fake-map {
+  background: #97cece;
+  height: 500px;
+  margin: 30px -30px;
+}
+
+#callforpapers h2,
+#sponsors h2 {
+  padding-bottom: 30px;
+}
+
+#callforpapers a.button {
+  margin: 8px 0 9px 0;
+}
+
+#sponsors h3 {
+  color: #444444;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 30px 0 5px 0;
+}
+
+#sponsors h3:first-of-type {
+  padding-top: 0;
+}
+
+#sponsors li {
+  display: inline-block;
+  padding: 0 44px 1px 0;
+}
+
+#platinum-sponsors li {
+  padding-right: 4px;
+}
+
+#sponsors li:last-of-type {
+  padding-right: 0;
+}
+
+#silver-sponsors img {
+  width: 240px;
+}
+
+#support-sponsors img {
+  width: 180px;
+}
+
+footer {
+  background: #333333 url("images/people.jpg") 0 23% no-repeat;
+  background-size: 100% auto;
+  color: #ffffff;
+  height: 340px;
+  margin: 19px 0 0 0;
+}
+
+footer h2 {
+  color: #ffffff;
+  padding: 30px 0 29px 0;
+}
+
+footer .content {
+  max-width: 970px;
+}
+
+#team-info {
+  background: rgba(0, 0, 0, .7);
+  padding: 0 10px;
+}
+
+#team-info h3 {
+  text-transform: uppercase;
+  font-size: 31px;
+  font-weight: 600;
+  padding: 10px 0 0 0;
+}
+
+#team-info p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#team-info a.button {
+  margin: 8px 0 19px 0;
+  text-shadow: 0 1px 2px #005000;
+}
+
+@media (max-width: 655px) {
+  nav {
+    display: none;
+  }
+
+  header {
+    margin-top: 0;
+    height: 300px;
+  }
+
+  header img {
+    margin-top: 90px;
+  }
+
+  header h1 {
+    font-size: 40px;
+  }
+
+  header p {
+    font-size: 20px;
+  }
+
+  #speakers {
+    margin: 0;
+  }
+
+  #schedule td {
+    display: block;
+    height: auto;
+    padding: 0 0 0 0;
+  }
+
+  #schedule td:first-child {
+    text-align: right;
+    padding: 20px 22px 0 0;
+  }
+
+  #schedule td:nth-child(3) {
+    text-align: left;
+    padding: 30px 0 9px 12px;
+    margin: 0 0 0 0;
+  }
+
+  #schedule tr.no-talk {
+    height: 147px;
+  }
+
+  #schedule td:nth-child(2) {
+    position: absolute;
+    left: 0;
+    padding: 0 0 0 42px;
+    margin: -43px 0 0 0;
+  }
+
+  #schedule img {
+    width: 80px;
+  }
+
+  #sponsors {
+    margin: 0 10px;
+  }
+
+  footer {
+    background-size: auto 100%;
+    background-position: center;
+  }
+
+  footer h2 {
+    font-size: 35px;
+    padding: 22px 0 21px 0;
+  }
+}

@@ -1,0 +1,198 @@
+@import url("whitespace_reset.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 35px 'Heebo', sans-serif;
+}
+
+main {
+  width: 684px;
+  height: 1345px;
+  padding: 14px;
+  border: solid 3px black;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 87px;
+  margin: -31px 0 0 -3px;
+  height: 105px;
+}
+
+h2 {
+  font-size: 35px;
+  font-weight: normal;
+  margin-top: -14px;
+}
+
+h2 + h2 {
+  margin-bottom: -3px;
+}
+
+section {
+  border-bottom: solid 30px black;
+}
+
+section:nth-child(2) {
+  border-width: 13px;
+}
+
+section:nth-last-child(-n+2)   {
+  border: none;
+}
+
+h3 {
+  font-size: 25px;
+  padding: 6px 0 2px 0;
+  border-bottom: solid 1px black;
+}
+
+dl {
+  display: inline-block;
+  margin: -2px 0 -5px 0;
+}
+
+dt {
+  display: inline-block;
+  font-weight: bold;
+}
+
+dd {
+  display: inline-block;
+}
+
+dl + dl {
+  float: right;
+}
+
+dl + dl dt {
+  font-weight: normal;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  display: block;
+  position: absolute;
+  right: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+th h3 {
+  border: none;
+}
+
+tr {
+  display: block;
+  position: relative;
+  height: 49px;
+  border-bottom: solid 1px black;
+}
+
+tbody tr:first-child {
+  border: none;
+}
+
+tbody tr:nth-child(2) {
+  border-top: solid 1px black;
+}
+
+section:nth-of-type(3) tr:nth-child(5n+2),
+section:nth-of-type(3) tr:nth-child(5n+3) {
+  margin-left: 41px;
+}
+
+section:nth-of-type(3) tr:nth-child(5n+2) dt,
+section:nth-of-type(3) tr:nth-child(5n+3) dt {
+  font-weight: normal;
+}
+
+td {
+  position: absolute;
+  top: -2px;
+  padding: 0;
+}
+
+td:nth-child(2) {
+  right: 0;
+}
+
+section:nth-of-type(3) td:nth-child(2) {
+  font-weight: bold;
+}
+
+section:nth-of-type(3) td:nth-child(2)::after {
+  content: "%";
+  font-weight: normal;
+  margin-left: -2px;
+}
+
+section:nth-of-type(4) tr {
+  height: 48px;
+}
+
+section:nth-of-type(4) td {
+  top: 2px;
+}
+
+section:last-of-type {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 19px;
+}
+
+section:last-of-type dt {
+  vertical-align: top;
+  font-size: 17px;
+  margin-top: -5px;
+}
+
+section:last-of-type dd {
+  width: 95%;
+}
+
+section:last-of-type tr {
+  position: static;
+  display: table-row;
+  height: 30px;
+}
+
+section:last-of-type tbody tr {
+  border: none;
+}
+
+section:last-of-type tbody tr:first-child {
+  height: 35px;
+  vertical-align: bottom;
+}
+
+section:last-of-type th,
+section:last-of-type td {
+  position: static;
+  display: table-cell;
+  text-align: left;
+}
+
+section:last-of-type tr:nth-child(4n+2) td:first-child {
+  padding-left: 36px;
+}
+
+section:last-of-type td:nth-child(2) {
+  width: 150px;
+}
+
+section:last-of-type td:nth-child(3) {
+  width: 143px;
+}
+
+section:last-of-type td:nth-child(4) {
+  display: inline-block;
+  width: 73px;
+}

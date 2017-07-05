@@ -5,14 +5,37 @@ include_name: true
 ---
 
 <main class="page-content">
-  <h2>Projects</h2>
-  <h3>Sushi site</h3>
-  <ul>
+  <h3>Projects</h3>
+  <p>Most of these projects were a part of my <a href="https://launchschool.com/">Launch School</a> course work. The front-end assignments were usually of the form "Implement such-and-such functionality using JavaScript (or jQuery or Backbone.js)" or "Using HTML and CSS, reproduce such-and-such website." (I haven't included any walk-throughs.)</p>
+  <p>Some of the projects are deployed on Heroku. These might take a few seconds to get going the first time you click on them.</p>
+
+  <ul class="project-list">
     <li>
-      <a href="https://bcf-sushi-app.herokuapp.com/" target="_blank">Heroku deployment</a>
+      <h4><a href="{% link index.html %}">My website</a> (ie, this site)</h4>
+      <p>I've only recently (July 2017) set up this site, and I'm still working on it. I'm using <a href="https://pages.github.com/">GitHub Pages</a> because they offer free, secure (https) hosting. It's given me the chance to learn Jekyll, Sass, and Liquid (templating).</p>
+      <p><a href="https://github.com/bcfore/bcfore.github.io" target="_blank">Here's</a> a link to the repo.</p>
     </li>
+
     <li>
-      <a href="https://github.com/bcfore/LS_frontend_courses/tree/master/260_JS_3/08_practice_projects/sushi_site" target="_blank">Source code</a>
+      <h4><a href="https://bcf-sushi-app.herokuapp.com/" target="_blank">Sushi site</a></h4>
+      <p>A single page app built using Backbone.js and jQuery on the front-end, with Express and Node.js on the back-end. We were given the HTML and CSS, and tasked with implementing the dynamic functionality.</p>
+      <p>See the <a href="https://github.com/bcfore/LS_frontend_courses/tree/master/260_JS_3/08_practice_projects/sushi_site" target="_blank">source code</a> for more details.</p>
+    </li>
+
+    <li>
+      <h4><a href="{% link /pages/projects/jsconf_br/index.html %}" target="_blank">Clone of JSConf BR 2014</a></h4>
+      <p>The task was to reproduce the layout and dynamic CSS effects of the <a href="http://2014.jsconfbr.org/" target="_blank">JSConf BR 2014</a> site. (The images come from the official website, but the HTML and CSS is my own.)</p>
+      <p>This was part of my exam preparation for the HTML/CSS portion of the Launch School curriculum. I find it useful to refer back to this from time to time, to remind myself of how to implement certain stylistic effects.</p>
+    </li>
+
+    <li>
+      <h4><a href="{% link /pages/projects/nutrition_facts/index.html %}" target="_blank">Nutrition Facts label</a></h4>
+      <p>The task here was a bit silly: to reproduce <a href="{% link /pages/projects/nutrition_facts/459px-FDA_Nutrition_Facts_Label_2006.jpg %}" target="_blank">this</a> image of a nutrition facts label (which comes from a <a href="https://en.wikipedia.org/wiki/Nutrition_facts_label") target="_blank">Wikipedia article</a>) without using any classes or ids to aid in the styling. Ie, we had to rely on CSS pseudo-classes and combinators. (The image I worked off of was zoomed in to about 150% -- that's why my version seems magnified.)</p>
+    </li>
+
+    <li>
+      <h4><a href="{% link /pages/projects/positioning_rules/index.html %}" target="_blank">Positioning rules summary</a></h4>
+      <p>This is a clone of a page with several examples of how to position elements. It's useful as a quick refresher on the box model, floats, and positioning.</p>
     </li>
   </ul>
 </main>
