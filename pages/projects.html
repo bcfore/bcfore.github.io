@@ -7,13 +7,20 @@ include_name: true
 <main class="page-content">
   <h3>Projects</h3>
   <p>Most of these projects were a part of my <a href="https://launchschool.com/">Launch School</a> course work. The front-end assignments were usually of the form "Implement such-and-such functionality using JavaScript (or jQuery or Backbone.js)" or "Using HTML and CSS, reproduce such-and-such website." (I haven't included any walk-throughs.)</p>
-  <p>Some of the projects are deployed on Heroku. These might take a few seconds to get going the first time you click on them.</p>
+  <p>Some of the projects are deployed on Heroku. These might take a few seconds to get going after you open them.</p>
 
   <ul class="project-list">
     <li>
       <h4><a href="{% link index.html %}">My website</a> (ie, this site)</h4>
-      <p>I've only recently (July 2017) set up this site, and I'm still working on it. I'm using <a href="https://pages.github.com/">GitHub Pages</a> because they offer free, secure (https) hosting. It's given me the chance to learn Jekyll, Sass, and Liquid (templating).</p>
+      <p>I've only recently (July 2017) set up this site, and I'm still working on it. I'm using <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> because they offer free, secure (https) hosting. It's given me the chance to learn Jekyll, Sass, and Liquid (templating).</p>
       <p><a href="https://github.com/bcfore/bcfore.github.io" target="_blank">Here's</a> a link to the repo.</p>
+    </li>
+
+    <li>
+      <h4><a href="https://bcf-trello-clone.herokuapp.com" target="_blank">Trello Clone</a></h4>
+      <p>This is my implementation of a <a href="https://trello.com" target="_blank">Trello</a> board, done as part of the final examination for Launch School's front-end curriculum. Basically, I was given a week and a half to write the HTML/CSS and then implement as many of the interactive features as I could. It uses Backbone.js as the MVC framework, with an Express server for the back-end.</p>
+      <p>This is probably my most sophisticated front-end project to date.</p>
+      <p>You can access the source code <a href="https://github.com/bcfore/trello_clone" target="_blank">here</a>.</p>
     </li>
 
     <li>
@@ -30,12 +37,18 @@ include_name: true
 
     <li>
       <h4><a href="{% link /pages/projects/nutrition_facts/index.html %}" target="_blank">Nutrition Facts label</a></h4>
-      <p>The task here was a bit silly: to reproduce <a href="{% link /pages/projects/nutrition_facts/459px-FDA_Nutrition_Facts_Label_2006.jpg %}" target="_blank">this</a> image of a nutrition facts label (which comes from a <a href="https://en.wikipedia.org/wiki/Nutrition_facts_label") target="_blank">Wikipedia article</a>) without using any classes or ids to aid in the styling. Ie, we had to rely on CSS pseudo-classes and combinators. (The image I worked off of was zoomed in to about 150% -- that's why my version seems magnified.)</p>
+      <p>The task here was to reproduce <a href="{% link /pages/projects/nutrition_facts/459px-FDA_Nutrition_Facts_Label_2006.jpg %}" target="_blank">this</a> image of a nutrition facts label (which comes from a <a href="https://en.wikipedia.org/wiki/Nutrition_facts_label") target="_blank">Wikipedia article</a>) without using any classes or ids to aid in the styling. Ie, we had to rely on CSS pseudo-classes and combinators. (The image I worked off of was zoomed in to about 150% -- that's why my version seems magnified.)</p>
     </li>
 
     <li>
       <h4><a href="{% link /pages/projects/positioning_rules/index.html %}" target="_blank">Positioning rules summary</a></h4>
-      <p>This is a clone of a page with several examples of how to position elements. It's useful as a quick refresher on the box model, floats, and positioning.</p>
+      <p>This is my clone of a page with several examples of how to position elements. It's useful as a quick refresher on the box model, floats, and positioning.</p>
+    </li>
+
+    <li>
+      <h4><a href="https://bcf-smashrun.herokuapp.com/" target="_blank">Simple Smashrun</a></h4>
+      <p>This is a Ruby/Sinatra app that I wrote as a practice project prior to an exam in Launch School's back-end curriculum. (I didn't know much HTML/CSS/JS at the time, hence the minimal UI.)</p>
+      <p>In the <a href="https://github.com/bcfore/bcf_smashrun" target="_blank">source code</a>, the main Ruby code is in <i>bcf_smashrun.rb</i>, and the Minitest suite of tests are in <i>test/bcf_smashrun_test.rb</i>.</p>
     </li>
   </ul>
 </main>
